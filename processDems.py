@@ -16,9 +16,9 @@ import zipfile
 import arcpy
 from arcpy import env
 
-starting_dir_name = r'C:\Users\slead\Downloads\Berry' # directory containing the zip file
-out_gdb_name = "Berry.gdb"  # output geodatabase to hold the new mosaicked raster
-raster_name = "DEM"         # the name of the new mosaicked raster
+starting_dir_name = r'C:\Users\slead\Downloads\working' # directory containing the zip file
+out_gdb_name = "working.gdb"  # output geodatabase to hold the new mosaicked raster
+raster_name = "Warren"         # the name of the new mosaicked raster
 
 def unzip_all(dir_name):
     os.chdir(dir_name) # change to directory with main zip file
@@ -45,7 +45,6 @@ if __name__ == "__main__":
     # a series of zip files, so traverse the newly created directories.
     # working_dir is the name of the deepest nested directory, containing
     # the ascii rasters to process
-    working_dir = ''
     for root, dirs, files in os.walk(starting_dir_name):
         path = root.split(os.sep)
         for file in files:
@@ -60,7 +59,7 @@ if __name__ == "__main__":
 
     files_to_process = []
     for item in os.listdir(working_dir):
-        if item.endswith(".asc"):
+        if item.endswith(".asc") or item.endswith(".tif"):
             files_to_process.append(item)
     print("\nInput raster files to process:\n\t{}".format(("\n\t").join(files_to_process)))
     
