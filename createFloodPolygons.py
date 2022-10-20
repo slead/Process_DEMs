@@ -11,15 +11,17 @@ import os
 
 working_dir = r"C:\Users\slead\Downloads\working\working.gdb"
 output_dir = r"C:\Users\slead\Flood\Flood_20220919.gdb"
-prefix = "Warren"
-elevations = [190, 191, 192, 193, 194, 195, 196, 197]
+prefix = "Echuca"
+min_elevation = 90
+max_elevation = 95
+step = 1
 
 arcpy.CheckOutExtension("SPATIAL")
 env.overwriteOutput = True
 env.workspace = working_dir
 dem = arcpy.Raster(os.path.join(working_dir,prefix))
 
-for elevation in elevations:
+for elevation in range(min_elevation, max_elevation + 1, step):
 
     # Create a binary raster for this elevation    
     print("Processing {} at {}m".format(prefix, elevation))
@@ -56,5 +58,5 @@ for elevation in elevations:
     arcpy.Delete_management("{}LT_{}_buffer".format(prefix, elev))
     arcpy.Delete_management("{}_LT{}_union".format(prefix, elev))
 
-
+del dem
 print("\nFinished")
