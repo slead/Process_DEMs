@@ -12,9 +12,9 @@ import numpy as np
 
 working_dir = r"C:\Users\slead\Downloads\working\working.gdb"
 output_dir = r"C:\Users\slead\Flood\Flood_20220919.gdb"
-prefix = "Condobolin"
-min_elevation = 188
-max_elevation = 191
+prefix = "Walgett"
+min_elevation = 120
+max_elevation = 126
 step = 0.2
 
 arcpy.CheckOutExtension("SPATIAL")
