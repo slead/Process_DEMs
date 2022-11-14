@@ -49,6 +49,4 @@ Run the script `createFloodPolygons.py` which will generate one featureclass for
 
 ## 6. Create layers in ArcGIS Pro
 
-Run the script `createLayers.py` to add the layers to ArcGIS Pro (update the parameters as per #5).
-
-Manually create a group layer from these individual layers, and publish to GeoHub. Share with the appropriate groups.
+Run the script `createLayers.py` to add the layers to ArcGIS Pro. Manually create a group layer from these individual layers, and publish to GeoHub. Share with the appropriate groups.
