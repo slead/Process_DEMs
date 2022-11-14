@@ -9,12 +9,12 @@ import os
 import numpy as np
 
 output_dir = r"C:\Users\slead\Flood\Flood_20220919.gdb"
-prefix = "Walgett"
-min_elevation = 126
-max_elevation = 130
+prefix = "Deniliquin"
+min_elevation = 91
+max_elevation = 95
 step = 0.2
 
-aprx = arcpy.mp.ArcGISProject(r"C:\Users\slead\Flood\processing\processing.aprx")
+aprx = arcpy.mp.ArcGISProject(r"C:\Users\slead\Flood\Flood.aprx")
 m = aprx.listMaps("Map")[0]
 
 for elev in np.arange(min_elevation, max_elevation + 1, step):
@@ -29,4 +29,5 @@ for elev in np.arange(min_elevation, max_elevation + 1, step):
     m.addLayer(lyr, "BOTTOM")
     
 aprx.save()
+del(aprx)
 print ("finished")
