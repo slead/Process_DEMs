@@ -20,9 +20,11 @@ raster_name = "Forbes"         # the name of the new mosaicked raster
 
 Place the zip files in `starting_dir_name`, set the `raster_name` to the desired output name and run the script.
 
+(Delete the zip files once processing is complete).
+
 ## 3. Clip the raster to the area of interest
 
-To speed up processing, reduce the size of the raster to cover only the required area.
+To speed up processing, reduce the size of the raster to cover only the required area, using Geoprocessing Tools or -> Data -> Export Raster with a clipping extent.
 
 ## 4. Estimate the min and max flood levels
 
