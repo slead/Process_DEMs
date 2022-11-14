@@ -4,7 +4,7 @@ This process generates polygons representing a particular elevation above sea le
 
 (This is a rough first-pass at the process - it can definitely be streamlined!)
 
-## 1. Download digital elevation mdoel(s) for the area of interest
+## 1. Download digital elevation model(s) for the area of interest
 
 Head to https://portal.spatial.nsw.gov.au/portal/apps/webappviewer/index.html?id=437c0697e6524d8ebf10ad0d915bc219 and download the DEM(s) covering the area of interest.
 
