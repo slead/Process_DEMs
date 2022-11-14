@@ -10,11 +10,12 @@ from arcpy.sa import *
 import os
 import numpy as np
 import yaml
+import sys
 
 # Read values from the config file
 config = yaml.safe_load(open("./config.yml"))
 output_dir = config['output_dir']
-dem = config['dem']
+input_dem = config['dem']
 prefix = config['prefix']
 min_elevation = config['min_elevation']
 max_elevation = config['max_elevation']
@@ -24,6 +25,10 @@ arcpy.CheckOutExtension("SPATIAL")
 env.overwriteOutput = True
 # env.workspace = working_dir
 env.outputCoordinateSystem = arcpy.SpatialReference(3857)
+dem = os.path.join(output_dir, input_dem)
+if not arcpy.Exists(dem):
+    sys.exit("Unable to find input dem {}".format(dem))
+dem = arcpy.Raster(dem)
 
 for elev in np.arange(min_elevation, max_elevation + 1, step):
     elev = round(elev, 1)

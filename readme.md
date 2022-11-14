@@ -35,12 +35,12 @@ Add the raster to ArcGIS Pro and use the Live River Level Height layer (https://
 Set the appropriate values in the config.yml file:
 
 ```
-dem = r"C:\Users\slead\Downloads\Deniliquin-DEM-AHD_55_5m\Mathoura-DEM-AHD_55_5m.asc" # input DEM
-output_dir = r"C:\Users\slead\Flood\Flood_20220919.gdb" # output geodatabase
-prefix = "ForbesEugowra"    # prefix to apply to the output polygons
-min_elevation = 246 # starting elevation
-max_elevation = 252 # end elevation
-step = 0.2  # interval between contours, in metres
+output_dir: C:\Users\slead\Flood\Flood_20220919.gdb # output geodatabase
+dem: ForbesEugowra # input DEM
+prefix: ForbesEugowra    # prefix to apply to the output polygons
+min_elevation: 246 # starting elevation
+max_elevation: 252 # end elevation
+step: 0.2  # interval between contours, in metres
 ```
 
 ## 5. Generate the flood polygons
