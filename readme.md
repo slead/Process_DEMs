@@ -8,6 +8,8 @@ This process generates polygons representing a particular elevation above sea le
 
 Head to https://portal.spatial.nsw.gov.au/portal/apps/webappviewer/index.html?id=437c0697e6524d8ebf10ad0d915bc219 and download the DEM(s) covering the area of interest.
 
+You may need to use the `Define Projection` tool in ArcGIS Pro.
+
 ## 2. Merge DEMs
 
 If you downloaded multiple DEMs, use the script `processDems.py` to merge them into a single raster.

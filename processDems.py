@@ -18,7 +18,7 @@ from arcpy import env
 
 starting_dir_name = r'C:\Users\slead\Downloads\working' # directory containing the zip file
 out_gdb_name = "working.gdb"  # output geodatabase to hold the new mosaicked raster
-raster_name = "Forbes"         # the name of the new mosaicked raster
+raster_name = "Walgett"         # the name of the new mosaicked raster
 
 def unzip_all(dir_name):
     os.chdir(dir_name) # change to directory with main zip file
@@ -78,7 +78,7 @@ if __name__ == "__main__":
         None, \
         1,\
         "LAST", \
-        "FIRST"
+        "MATCH"
     )
 
 print("\nFinished")

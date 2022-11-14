@@ -11,7 +11,7 @@ min_elevation = config['min_elevation']
 max_elevation = config['max_elevation']
 step = config['step']
 
-prefix = "Buronga_flood_polygons"
+prefix = "Parks_flood_polygons"
 base = "https://geohub.transport.nsw.gov.au/server/rest/services/Hosted/"
 
 idx = 0
