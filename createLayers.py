@@ -16,8 +16,9 @@ prefix = config['prefix']
 min_elevation = config['min_elevation']
 max_elevation = config['max_elevation']
 step = config['step']
+project = config['project']
 
-aprx = arcpy.mp.ArcGISProject(r"C:\Users\slead\Flood\Flood.aprx")
+aprx = arcpy.mp.ArcGISProject(project)
 m = aprx.listMaps("Map")[0]
 
 for elev in np.arange(min_elevation, max_elevation + 1, step):
