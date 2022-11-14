@@ -9,13 +9,16 @@ from arcpy import env
 from arcpy.sa import *
 import os
 import numpy as np
+import yaml
 
-dem = r"C:\Users\slead\Flood\Flood_20220919.gdb\ForbesEugowra" # input DEM
-output_dir = r"C:\Users\slead\Flood\Flood_20220919.gdb" # output geodatabase
-prefix = "ForbesEugowra"    # prefix to apply to the output polygons
-min_elevation = 246 # starting elevation
-max_elevation = 252 # end elevation
-step = 0.2  # interval between contours, in metres
+# Read values from the config file
+config = yaml.safe_load(open("./config.yml"))
+output_dir = config['output_dir']
+dem = config['dem']
+prefix = config['prefix']
+min_elevation = config['min_elevation']
+max_elevation = config['max_elevation']
+step = config['step']
 
 arcpy.CheckOutExtension("SPATIAL")
 env.overwriteOutput = True

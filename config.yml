@@ -1,0 +1,6 @@
+dem: r"C:\Users\slead\Flood\Flood_20220919.gdb\ForbesEugowra" # input DEM
+prefix: "ForbesEugowra"    # prefix to apply to the output polygons
+output_dir: r"C:\Users\slead\Flood\Flood_20220919.gdb" # output geodatabase
+min_elevation: 246 # starting elevation
+max_elevation: 252 # end elevation
+step: 0.2  # interval between contours, in metres

@@ -4,13 +4,16 @@
 
 import numpy as np
 import json
+import yaml
+
+config = yaml.safe_load(open("./config.yml"))
+min_elevation = config['min_elevation']
+max_elevation = config['max_elevation']
+step = config['step']
 
 prefix = "Buronga_flood_polygons"
-min_elevation = 35
-max_elevation = 40
-
 base = "https://geohub.transport.nsw.gov.au/server/rest/services/Hosted/"
-step = 0.2
+
 idx = 0
 config = []
 for elev in np.arange(min_elevation, max_elevation + 1, step):

@@ -30,9 +30,9 @@ To speed up processing, reduce the size of the raster to cover only the required
 
 Add the raster to ArcGIS Pro and use the Live River Level Height layer (https://geohub.transport.nsw.gov.au/portal/home/item.html?id=b21e407c9bf745319b99fec37ff20fcd) to estimate the min and max levels required for the flood model.
 
-## 5. Generate the flood polygons
+## 5. Update the config file
 
-Edit the script `createFloodPolygons.py` to update the listed parameters:
+Set the appropriate values in the config.yml file:
 
 ```
 dem = r"C:\Users\slead\Downloads\Deniliquin-DEM-AHD_55_5m\Mathoura-DEM-AHD_55_5m.asc" # input DEM
@@ -43,7 +43,9 @@ max_elevation = 252 # end elevation
 step = 0.2  # interval between contours, in metres
 ```
 
-Run the script, which will generate one featureclass for each elevation contour.
+## 5. Generate the flood polygons
+
+Run the script `createFloodPolygons.py` which will generate one featureclass for each elevation contour.
 
 ## 6. Create layers in ArcGIS Pro
 

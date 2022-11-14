@@ -7,12 +7,15 @@ import arcpy
 from arcpy import env
 import os
 import numpy as np
+import yaml
 
-output_dir = r"C:\Users\slead\Flood\Flood_20220919.gdb"
-prefix = "Deniliquin"
-min_elevation = 91
-max_elevation = 95
-step = 0.2
+config = yaml.safe_load(open("./config.yml"))
+output_dir = config['output_dir']
+dem = config['dem']
+prefix = config['prefix']
+min_elevation = config['min_elevation']
+max_elevation = config['max_elevation']
+step = config['step']
 
 aprx = arcpy.mp.ArcGISProject(r"C:\Users\slead\Flood\Flood.aprx")
 m = aprx.listMaps("Map")[0]
