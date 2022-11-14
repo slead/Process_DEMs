@@ -43,7 +43,7 @@ max_elevation = 252 # end elevation
 step = 0.2  # interval between contours, in metres
 ```
 
-Run the script, which will generate one featureclasses for each elevation contour.
+Run the script, which will generate one featureclass for each elevation contour.
 
 ## 6. Create layers in ArcGIS Pro
 
